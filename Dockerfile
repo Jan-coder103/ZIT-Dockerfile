@@ -3,7 +3,7 @@ FROM runpod/worker-comfyui:5.5.1-base
 
 # Install GGUF support (crucial for specific models)
 # Using --mode remote to ensure we get the latest registry info
-RUN comfy node install ComfyUI-GGUF --mode remote
+RUN comfy-node-install ComfyUI-GGUF --mode remote
 
 # Download the specific GGUF models defined in your workflow
 # UNET: Flux.2 Klein 4B (GGUF Q8_0)
