@@ -1,6 +1,9 @@
 # clean base image containing only comfyui, comfy-cli and comfyui-manager
 FROM runpod/worker-comfyui:5.5.1-base
 
+# 1. Install git (required for updating ComfyUI)
+RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
+
 # 1. Update ComfyUI Core to the latest version
 # We also update the requirements to prevent "ModuleNotFoundError"
 RUN cd /comfyui && \
