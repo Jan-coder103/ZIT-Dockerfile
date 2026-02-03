@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /
 # 1. Update ComfyUI Core to the latest version
 # We also update the requirements to prevent "ModuleNotFoundError"
 RUN cd /comfyui && \
-    git pull && \
+    git switch master 2>/dev/null || git switch -c master origin/master && \
+    git pull origin master && \
     pip install --upgrade --no-cache-dir -r requirements.txt
 
 # Install GGUF support (crucial for specific models)
