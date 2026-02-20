@@ -1,4 +1,4 @@
-# fZIT Dockerfile for Runpod serverless
+# ZIT Dockerfile for Runpod serverless
 
 Dockerized ComfyUI workflow: ZIT
 
