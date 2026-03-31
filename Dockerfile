@@ -32,4 +32,4 @@ RUN comfy model download --url https://huggingface.co/Snowy4901/Kibeko/resolve/m
 RUN comfy model download --url https://huggingface.co/Snowy4901/Kibeko/resolve/main/kibeko2/ZIT-realistic.safetensors --relative-path models/loras --filename ZIT-realistic.safetensors
 RUN comfy model download --url https://huggingface.co/Snowy4901/Kibeko/resolve/main/kibeko2/ZIT-small.safetensors --relative-path models/loras --filename ZIT-small.safetensors
 
-# No COPY workflow_api.json needed here since you send it via API request!
+# No COPY workflow_api.json needed here since you send it via API request!!
